@@ -27,7 +27,8 @@ SOURCES += \
 
 HEADERS += \
         candyqt_global.h \ 
-    numbergate.h
+    numbergate.h \
+    candy_macros.h
 
 unix {
     target.path = /usr/lib
