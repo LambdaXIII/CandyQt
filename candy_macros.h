@@ -3,19 +3,48 @@
 
 
 #define CANDY_PROPERTY(type,lower,upper) \
-  private:\
+  protected:\
   type m_##lower;\
   public: \
   inline type lower() const { return m_##lower;} \
   inline void set##upper(type x) { m_##lower = x;}
 
-
 #define CANDY_PROPERTY_VALUE(type,lower,upper,value) \
-  private:\
+  protected:\
   type m_##lower = value;\
   public: \
   inline type lower() const { return m_##lower;} \
   inline void set##upper(type x) { m_##lower = x;}
+
+
+
+#define CANDY_PROPERTY_RO(type, name) \
+  protected:\
+  type m_##name;\
+  public:\
+  inline type name() {return m_##name;}
+
+#define CANDY_PROPERTY_RO_VALUE(type,lower,value) \
+  protected:\
+  type m_##lower = value;\
+  public: \
+  inline type lower() const { return m_##lower;}
+
+
+
+#define CANDY_PROPERTY_DEF(type,lower,upper) \
+  protected:\
+  type m_##lower;\
+  public: \
+  type lower() const;\
+  void set##upper(type x);
+
+#define CANDY_PROPERTY_DEF_VALUE(type,lower,upper,value) \
+  protected:\
+  type m_##lower = value;\
+  public: \
+  type lower() const;\
+  void set##upper(type x);
 
 
 #endif // CANDYMACROS_H
