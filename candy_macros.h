@@ -46,5 +46,11 @@
   type lower() const;\
   void set##upper(type x);
 
+#define CANDY_PROPERTY_QOBJ_PTR(type,lower,upper) \
+  protected:\
+  type* m_##lower;\
+  public: \
+  inline type* lower() const { return m_##lower;} \
+  inline void set##upper(type* x) {x->setParent(this); m_##lower = x;}
 
 #endif // CANDYMACROS_H

@@ -23,12 +23,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    numbergate.cpp
+    numbergate.cpp \
+    stringtools.cpp
 
 HEADERS += \
         candyqt_global.h \ 
     numbergate.h \
-    candy_macros.h
+    candy_macros.h \
+    stringtools.h
 
 unix {
     target.path = /usr/lib
