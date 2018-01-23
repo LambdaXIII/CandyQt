@@ -29,4 +29,17 @@ QString fix_digit_count_2(int x)
   return QString("%1").arg(x);
 }
 
+QString fix_digit_count_3(int x)
+{
+  if (x < 0)
+    x = -x;
+  if (x >= 1000)
+    x = x % 1000;
+
+  if (x < 100)
+    return QString("0%1").arg(fix_digit_count_2(x));
+
+  return QString::number(x);
+}
+
 } //namespace candy
