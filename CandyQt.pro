@@ -30,7 +30,8 @@ HEADERS += \
         candyqt_global.h \ 
     numbergate.h \
     candy_macros.h \
-    stringtools.h
+    stringtools.h \
+    numbercounter.h
 
 unix {
     target.path = /usr/lib
