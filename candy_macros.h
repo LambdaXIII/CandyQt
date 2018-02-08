@@ -53,4 +53,9 @@
   inline type* lower() const { return m_##lower;} \
   inline void set##upper(type* x) {x->setParent(this); m_##lower = x;}
 
+
+//#define CANDY_DEBUG qDebug() << QString("[%1]").arg(this->metaObject()->className())
+//#define CANDY_DEBUG qDebug("[%s]", this->metaObject()->className())
+#define CANDY_DEBUG qDebug() << this->metaObject()->className() << "|"
+
 #endif // CANDYMACROS_H
