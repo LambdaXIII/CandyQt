@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       -= gui
+QT       += gui core
 
 TARGET = CandyQt
 TEMPLATE = lib
@@ -24,14 +24,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     numbergate.cpp \
-    stringtools.cpp
+    stringtools.cpp \
+    candypainter.cpp
 
 HEADERS += \
         candyqt_global.h \ 
     numbergate.h \
     candy_macros.h \
     stringtools.h \
-    numbercounter.h
+    numbercounter.h \
+    candypainter.h
 
 unix {
     target.path = /usr/lib
