@@ -56,6 +56,6 @@
 
 //#define CANDY_DEBUG qDebug() << QString("[%1]").arg(this->metaObject()->className())
 //#define CANDY_DEBUG qDebug("[%s]", this->metaObject()->className())
-#define CANDY_DEBUG qDebug() << this->metaObject()->className() << "|"
+#define CANDY_DEBUG qDebug() << this->metaObject()->className() << "|" << this->objectName() << ":::"
 
 #endif // CANDYMACROS_H
