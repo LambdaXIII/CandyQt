@@ -4,14 +4,14 @@
 namespace candy {
 
 
-int how_many_chinese_chars(QString s)
+int how_many_chinese_chars(const QString &s)
 {
   QRegExp chn("[\u4e00-\u9fa5]");
   chn.indexIn(s);
   return chn.captureCount();
 }
 
-int how_many_english_words(QString s)
+int how_many_english_words(const QString &s)
 {
   QRegExp eng("[a-zA-z]+");
   eng.indexIn(s);
